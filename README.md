@@ -1,12 +1,12 @@
 # simplesqlmapcsrfproxy
 
-What is 'simplesqlmapcsrfproxy'?
+## What is 'simplesqlmapcsrfproxy'?
 
 `sqlmap` is a wonderful piece, first of its class, when one is working on a pentest is one of the tools you should definitively use beside `nmap`, `cansina` or `metasploit` and others.
 
-Bur, sometimes, we found a request we want to test but a csrf-token is needed.
+But, sometimes, we found a request we want to test but a csrf-token is needed.
 
-`sqlmap` is intelligent enough to extract it from places like fields, params, etc.
+`sqlmap` is intelligent enough to extract it from many places like fields, params, etc.
 
 But in some situations (see example.py) I found that a little help will help `sqlmap` help you.
 
@@ -16,7 +16,7 @@ Here is the purpose of 'simplesqlmapcsrfproxy':
 
 It raises a simple http server you pass to `sqlmap`.
 
-It make a request to the real url you are testing and process the content scraping for the elusive csrf token.
+It makes a request to the real url you are testing and process the content scraping for the elusive csrf token.
 
 When the token is found, it serves a mock html form with the token ready to `sqlmap` to consume.
 
